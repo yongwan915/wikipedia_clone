@@ -1,0 +1,167 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+ul, li, a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+} 
+.header {
+    margin-bottom: 20px;
+}
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right ul {
+    display: flex;
+    gap: 15px;
+}
+.header-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.search-wrap {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 600px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+/* 왼쪽 네비게이션 */
+.nav {
+    position: sticky;
+    top: 20px;
+    height: calc(100vh - 40px);
+    width: 200px;
+}
+
+/* 메인 콘텐츠 */
+.content-main {
+    flex: 1;
+    margin: 0 10px;
+}
+
+/* 오른쪽 옵션바 */
+.option-bar {
+    position: sticky;
+    top: 20px;
+    height: calc(100vh - 40px);
+    width: 200px;
+}
+.semi-settings-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+/* 각 섹션에 기본 스타일 추가 */
+.nav, .content-main, .option-bar {
+    padding: 15px;
+}
+.nav, .option-bar {
+    margin-top: 50px;
+}
+
+.nav .side-nav-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.nav .side-nav-bar span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-hide, .option-bar-hide {
+    margin-left: 20px;
+    padding: 4px 8px;
+    border: 0;
+    border-radius: 2px;
+    font-size: 12px;
+}
+.side-nav-list li {
+    margin-bottom: 5px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;  /* 세로 방향으로만 변경 */
+    gap: 8px;
+}
+
+.header-menu-dropdown {
+    cursor: pointer;
+}
+
+.header-menu-dropdown img {
+    width: 24px;  /* 이미지 크기 조절 */
+    height: 24px;
+}
+
+.header-menu {
+    display: none;  /* 기본적으로 메뉴 숨김 */
+    position: absolute;  /* 드롭다운 메뉴 위치 설정 */
+    top: 100%;  /* 드롭다운 아이콘 바로 아래 위치 */
+    left: 0;
+    background-color: white;  /* 배경색 추가 */
+    border: 1px solid #ccc;  /* 테두리 추가 */
+    border-radius: 4px;
+    padding: 8px;
+    min-width: 150px;  /* 최소 너비 설정 */
+    z-index: 1000;  /* 다른 요소들 위에 표시 */
+}
+
+.header-menu.active {
+    display: block;  /* active 클래스가 있을 때 메뉴 표시 */
+}
+
